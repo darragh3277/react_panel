@@ -1,25 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Home, HelpCircle } from 'react-feather';
+import { sidebarLinks } from './SidebarLinks';
 import './Sidebar.css';
-
-const sidebarLinks = [
-    {
-        label: "Dashboard",
-        icon: <Home className="icon mr-1" />,
-        path: "/"
-    },
-    {
-        label: "About",
-        icon: <HelpCircle className="icon mr-1" />,
-        path: "/about"
-    },
-]
 
 class Sidebar extends React.Component {
     render () {
         return (
-            <nav className="col-md-3 col-lg-2 bg-light sidebar p-0">
+            <nav className="col-md-3 col-lg-2 bg-light sidebar p-0 d-none d-md-block">
                 <div className="sidebar-sticky">
                     <ul className="nav flex-column">
                         {sidebarLinks.map((link,i)=>
