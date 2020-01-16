@@ -9,7 +9,7 @@ import './Navbar.css'
 class Navbar extends React.Component {
     render(){
         return (
-            <nav className="navbar navbar-dark bg-dark sticky-top p-0">
+            <nav className="navbar navbar-dark bg-dark sticky-top p-0 border-bottom border-dark">
                     <div className="col-md-8 col-lg-9 pl-0">
                         <button 
                             className="navbar-toggler text-light ml-4 d-md-none" 

@@ -1,0 +1,7 @@
+.dropdown-panel { 
+    position: absolute;
+    min-width: 20rem;
+    min-height: 10rem;
+    right: 0;
+    left: auto;
+}
