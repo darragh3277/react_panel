@@ -1,12 +1,12 @@
 import React from 'react';
+import PageTitle from '../page_header/PageHeader';
 
 class Dashboard extends React.Component {
     render () {
         return (
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
-            
-          </div>
+            <>
+              <PageTitle title="Dashboard" />
+            </>
         );
     }
   }

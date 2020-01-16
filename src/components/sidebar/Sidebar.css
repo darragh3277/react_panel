@@ -11,3 +11,8 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+.icon {
+    height: 16px;
+    width: 16px;
+}
