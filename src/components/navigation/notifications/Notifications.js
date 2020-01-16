@@ -14,12 +14,6 @@ const notifications = [
         image: "images/default_profile.png",
         date: "10/01/2020",
         content: "Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        from: "David John",
-        image: "images/default_profile.png",
-        date: "10/01/2020",
-        content: "Lorem ipsum dolor sit amet, consectetur"
     }
 ]
 
@@ -42,8 +36,12 @@ class Notifications extends React.Component {
                             </div>
                         </div>
                     </li>
+                    <ul className="list-group notification-messages">
                     {notifications.map((notification,i)=>
-                        <li class="notification-box" key={i}>
+                    {
+                        let notificationBox = i % 2 == 1 ? 'notification-box bg-gray' : 'notification-box';
+                        return (
+                        <li className={notificationBox} key={i}>
                             <div class="row">
                                 <div class="col-lg-3 col-sm-3 col-3 text-center">
                                     <img src={notification.image} class="w-50 rounded-circle" />
@@ -54,8 +52,10 @@ class Notifications extends React.Component {
                                     <small class="text-warning">{notification.date}</small>
                                 </div>    
                             </div>
-                        </li>
+                        </li>);
+                    }
                     )}
+                    </ul>
                     <li class="footer bg-dark text-center">
                         <a href="" class="text-light">View All</a>
                     </li>
