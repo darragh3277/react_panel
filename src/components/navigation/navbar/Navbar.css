@@ -7,3 +7,8 @@
 .nav-link {
     font-weight: 500;
 }
+
+.navbar .icon {
+    height: 16px;
+    width: 16px;
+}

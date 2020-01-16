@@ -1,7 +1,7 @@
 import React from 'react';
 import {routes} from './Routes'
-import Navbar from './components/navbar/Navbar';
-import Sidebar from './components/sidebar/Sidebar';
+import Navbar from './components/navigation/navbar/Navbar';
+import Sidebar from './components/navigation/sidebar/Sidebar';
 import {
   BrowserRouter as Router,
   Route,

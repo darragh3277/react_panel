@@ -2,12 +2,12 @@ import React from 'react';
 import {
     Link
   } from "react-router-dom";
-import { sidebarLinks } from './SidebarLinks';
+import { sidebarLinks } from '../sidebar/SidebarLinks';
 
-class CollapsedSideBar extends React.Component {
+class CollapsedNavBar extends React.Component {
     render(){
         return (
-            <div class="collapse navbar-collapse d-md-none ml-3" id="toggleCollapsedSideBar">
+            <div class="collapse navbar-collapse d-md-none ml-4" id="toggleCollapsedNavBar">
                 <ul class="navbar-nav">
                     {sidebarLinks.map((link,i)=>
                         <li className="nav-item">
@@ -20,4 +20,4 @@ class CollapsedSideBar extends React.Component {
     }
   }
   
-  export default CollapsedSideBar;
+  export default CollapsedNavBar;

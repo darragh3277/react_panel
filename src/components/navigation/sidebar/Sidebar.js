@@ -10,7 +10,7 @@ class Sidebar extends React.Component {
                 <div className="sidebar-sticky">
                     <ul className="nav flex-column">
                         {sidebarLinks.map((link,i)=>
-                            <li className="nav-item">
+                            <li className="nav-item ml-1">
                                 <Link key={i} className="nav-link text-secondary" to={link.path}>{link.icon} {link.label}</Link>
                             </li>
                         )}
