@@ -17,16 +17,14 @@ class App extends React.Component {
         <Router>
           <Navbar />
           <Switch>
-            <div className="container-fluid h-100">
-              <div className="row h-100">
-                <div className="col-md-3 col-lg-2 border">
-                  <Sidebar />
-                </div>
-                <div className="col-md-9 col-lg-10 border">
+            <div className="container-fluid">
+              <div className="row">
+                <Sidebar />
+                <main className="col-md-9 col-lg-10">
                   {routes.map((route,i)=>
                     <Route key={i} path={route.path} component={route.component} exact></Route>
                   )}
-                </div>
+                </main>
               </div>
             </div>
           </Switch>
