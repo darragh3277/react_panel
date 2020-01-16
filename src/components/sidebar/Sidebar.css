@@ -5,8 +5,8 @@
 .sidebar-sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 56px;
-    height: calc(100vh - 56px);
+    top: 48px;
+    height: calc(100vh - 48px);
     padding-top: .5rem;
     overflow-x: hidden;
     overflow-y: auto;

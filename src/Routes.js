@@ -1,5 +1,5 @@
-import Dashboard from "./components/dashboard/Dashboard"
-import About from "./components/about/About"
+import Dashboard from "./components/main/dashboard/Dashboard"
+import About from "./components/main/about/About"
 
 export const routes = [
     {
