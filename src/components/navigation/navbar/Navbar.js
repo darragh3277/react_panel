@@ -1,6 +1,6 @@
 import React from 'react';
 import CollapsedNavBar from './CollapsedNavBar';
-import Notifications from '../notifications/Notifications';
+import NotificationsMenu from '../notifications/NotificationMenu';
 import {
     Link
   } from "react-router-dom";
@@ -25,7 +25,7 @@ class Navbar extends React.Component {
                         <CollapsedNavBar />
                     </div>
                     <div className="col-md-4 col-lg-3">
-                        <Notifications />
+                        <NotificationsMenu />
                     </div>
             </nav>
         );
