@@ -12,14 +12,14 @@ class Navbar extends React.Component {
             <nav className="navbar navbar-dark bg-dark sticky-top p-0">
                     <div className="col-md-8 col-lg-9 pl-0">
                         <button 
-                            class="navbar-toggler text-light ml-4 d-md-none" 
+                            className="navbar-toggler text-light ml-4 d-md-none" 
                             type="button" 
                             data-toggle="collapse" 
                             data-target="#toggleCollapsedNavBar" 
                             aria-controls="toggleCollapsedNavBar" 
                             aria-expanded="false" 
                             aria-label="Toggle sidebar">
-                            <span class="navbar-toggler-icon text-light"></span>
+                            <span className="navbar-toggler-icon text-light"></span>
                         </button>
                         <Link className="navbar-brand text-light ml-4 mr-4 mr-0" to="/">Company name</Link>
                         <CollapsedNavBar />
