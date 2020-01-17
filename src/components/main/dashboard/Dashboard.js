@@ -6,6 +6,7 @@ class Dashboard extends React.Component {
         return (
             <>
               <PageTitle title="Dashboard" />
+              <p>This is a basic dashboard</p>
             </>
         );
     }
