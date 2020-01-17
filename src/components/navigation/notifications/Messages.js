@@ -58,7 +58,7 @@ class Messages extends React.Component {
             <div className="col-2 px-0 text-center dropdown pointer">
                 <Mail className="icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                 <span className="badge badge-pill badge-success"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{numberMessages}</span>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu dropdown-wide">
                     <li className="head text-light bg-dark">
                         <div className="row">
                             <div className="col-lg-12 col-sm-12 col-12">

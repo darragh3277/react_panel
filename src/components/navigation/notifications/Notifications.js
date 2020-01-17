@@ -42,7 +42,7 @@ class Notifications extends React.Component {
             <div className="col-2 px-0 text-center dropdown pointer">
                 <Bell className="icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                 <span className="badge badge-pill badge-primary"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{numberNotifications}</span>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu dropdown-wide">
                     <li className="head text-light bg-dark">
                         <div className="row">
                             <div className="col-lg-12 col-sm-12 col-12">
