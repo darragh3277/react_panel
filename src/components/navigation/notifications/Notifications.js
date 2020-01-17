@@ -1,17 +1,12 @@
 import React from 'react';
-import { Mail } from 'react-feather';
-import './Notifications.css';
+import { Bell } from 'react-feather';
 
 const notifications = [
     {
-        from: "David John",
-        image: "images/default_profile.png",
         date: "10/01/2020",
-        content: "Lorem ipsum dolor sit amet, consectetur"
+        content: "Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur"
     },
     {
-        from: "David John",
-        image: "images/default_profile.png",
         date: "10/01/2020",
         content: "Lorem ipsum dolor sit amet, consectetur"
     }
@@ -19,45 +14,46 @@ const notifications = [
 
 class Notifications extends React.Component {
 
-    render(){
-
-        let numberNotifications = notifications.length;
-
+    renderContent = () => {
         return (
-            <div className="notification-alert col-2 px-0 text-center dropdown pointer">
-                <Mail className="icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                <span class="badge badge-pill badge-success"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2</span>
-                <ul class="dropdown-menu">
-                    <li class="head text-light bg-dark">
-                        <div class="row">
-                            <div class="col-lg-12 col-sm-12 col-12">
+            <ul className="list-group notification-messages">
+                {notifications.map((notification,i)=>
+                    {
+                        let notificationBox = i % 2 === 1 ? 'notification-box bg-gray px-3' : 'notification-box px-3';
+                        return (
+                            <li className={notificationBox} key={i}>
+                                <div className="row">   
+                                    <div className="col">
+                                        <div>{notification.content}</div>
+                                        <small className="text-warning">{notification.date}</small>
+                                    </div>    
+                                </div>
+                            </li>
+                        );
+                    }
+                )}
+            </ul>
+        )
+    }
+
+    render(){
+        let numberNotifications = notifications.length;
+        return (
+            <div className="col-2 px-0 text-center dropdown pointer">
+                <Bell className="icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                <span className="badge badge-pill badge-primary"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{numberNotifications}</span>
+                <ul className="dropdown-menu">
+                    <li className="head text-light bg-dark">
+                        <div className="row">
+                            <div className="col-lg-12 col-sm-12 col-12">
                                 <span>Notifications ({numberNotifications})</span>
-                                <a href="" class="float-right text-light">Mark all as read</a>
+                                <a href="/" className="float-right text-light">Mark all as read</a>
                             </div>
                         </div>
                     </li>
-                    <ul className="list-group notification-messages">
-                    {notifications.map((notification,i)=>
-                    {
-                        let notificationBox = i % 2 == 1 ? 'notification-box bg-gray' : 'notification-box';
-                        return (
-                        <li className={notificationBox} key={i}>
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-3 col-3 text-center">
-                                    <img src={notification.image} class="w-50 rounded-circle" />
-                                </div>    
-                                <div class="col-lg-8 col-sm-8 col-8">
-                                    <strong class="text-info">{notification.from}</strong>
-                                    <div>{notification.content}</div>
-                                    <small class="text-warning">{notification.date}</small>
-                                </div>    
-                            </div>
-                        </li>);
-                    }
-                    )}
-                    </ul>
-                    <li class="footer bg-dark text-center">
-                        <a href="" class="text-light">View All</a>
+                    {this.renderContent()}
+                    <li className="footer bg-dark text-center">
+                        <a href="/" className="text-light">View All</a>
                     </li>
                 </ul>
             </div>
