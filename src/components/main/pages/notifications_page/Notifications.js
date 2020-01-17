@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTitle from '../page_header/PageHeader';
+import PageTitle from '../../page_header/PageHeader';
 
 class Notifications extends React.Component {
     render () {
