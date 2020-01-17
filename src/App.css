@@ -4,3 +4,6 @@ html, body, #root {
 body {
   font-size: .875rem;
 }
+.pointer {
+  cursor: pointer;
+}
