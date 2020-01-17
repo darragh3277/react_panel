@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Bell } from 'react-feather';
 
 const notifications = [
@@ -21,14 +22,16 @@ class Notifications extends React.Component {
                     {
                         let notificationBox = i % 2 === 1 ? 'notification-box bg-gray px-3' : 'notification-box px-3';
                         return (
-                            <li className={notificationBox} key={i}>
-                                <div className="row">   
-                                    <div className="col">
-                                        <div>{notification.content}</div>
-                                        <small className="text-warning">{notification.date}</small>
-                                    </div>    
-                                </div>
-                            </li>
+                            <Link to={'/messages'} key={i}>
+                                <li className={notificationBox}>
+                                    <div className="row">   
+                                        <div className="col">
+                                            <div>{notification.content}</div>
+                                            <small className="text-warning">{notification.date}</small>
+                                        </div>    
+                                    </div>
+                                </li>
+                            </Link>
                         );
                     }
                 )}
@@ -39,9 +42,9 @@ class Notifications extends React.Component {
     render(){
         let numberNotifications = notifications.length;
         return (
-            <div className="col-2 px-0 text-center dropdown pointer">
-                <Bell className="icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                <span className="badge badge-pill badge-primary"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{numberNotifications}</span>
+            <div className="col-2 px-0 text-center dropdown">
+                <Bell className="icon cursor-pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                <span className="badge badge-pill badge-primary cursor-pointer"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{numberNotifications}</span>
                 <ul className="dropdown-menu dropdown-wide">
                     <li className="head text-light bg-dark">
                         <div className="row">
@@ -53,7 +56,7 @@ class Notifications extends React.Component {
                     </li>
                     {this.renderContent()}
                     <li className="footer bg-dark text-center">
-                        <a href="/" className="text-light">View All</a>
+                        <Link to="/notifications" className="text-light">View All</Link>
                     </li>
                 </ul>
             </div>

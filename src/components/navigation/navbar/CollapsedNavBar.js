@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-    Link
-  } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { mainContentLinks, subContentLinks } from '../sidebar/SidebarLinks';
+import './CollapsedNavBar.css'
 
 class CollapsedNavBar extends React.Component {
 
@@ -11,7 +10,7 @@ class CollapsedNavBar extends React.Component {
             <>
                 {mainContentLinks.map((link,i)=>
                     <li className="nav-item ml-1" key={i}>
-                        <Link className="nav-link text-secondary" to={link.path}>{link.icon} {link.label}</Link>
+                        <NavLink className="nav-link text-secondary" activeClassName="active" to={link.path} exact>{link.icon} {link.label}</NavLink>
                     </li>
                 )}
             </>
@@ -23,7 +22,7 @@ class CollapsedNavBar extends React.Component {
             <>
                 {subContentLinks.map((link,i)=>
                     <li className="nav-item ml-1" key={i}>
-                        <Link className="nav-link text-secondary" to={link.path}>{link.icon} {link.label}</Link>
+                        <NavLink className="nav-link text-secondary" activeClassName="active" to={link.path} exact>{link.icon} {link.label}</NavLink>
                     </li>
                 )}
             </>

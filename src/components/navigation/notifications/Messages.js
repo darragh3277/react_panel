@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Mail } from 'react-feather';
 
 const messages = [
@@ -31,18 +32,20 @@ class Messages extends React.Component {
                     {
                         let notificationBox = i % 2 === 1 ? 'notification-box bg-gray' : 'notification-box';
                         return (
-                            <li className={notificationBox} key={i}>
-                                <div className="row">
-                                    <div className="col-3 text-center">
-                                        <img src={message.image} alt="User profile" className="w-50 rounded-circle" />
-                                    </div>    
-                                    <div className="col-9">
-                                        <strong className="text-info">{message.from}</strong>
-                                        <div>{message.content}</div>
-                                        <small className="text-warning">{message.date}</small>
-                                    </div>    
-                                </div>
-                            </li>
+                            <Link to={'/notifications'} key={i}>
+                                <li className={notificationBox} key={i}>
+                                    <div className="row">
+                                        <div className="col-3 text-center">
+                                            <img src={message.image} alt="User profile" className="w-50 rounded-circle" />
+                                        </div>    
+                                        <div className="col-9">
+                                            <strong className="text-info">{message.from}</strong>
+                                            <div>{message.content}</div>
+                                            <small className="text-warning">{message.date}</small>
+                                        </div>    
+                                    </div>
+                                </li>
+                            </Link>
                         );
                     }
                 )}
@@ -55,9 +58,9 @@ class Messages extends React.Component {
         let numberMessages = messages.length;
 
         return (
-            <div className="col-2 px-0 text-center dropdown pointer">
-                <Mail className="icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                <span className="badge badge-pill badge-success"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{numberMessages}</span>
+            <div className="col-2 px-0 text-center dropdown">
+                <Mail className="icon cursor-pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                <span className="badge badge-pill badge-success cursor-pointer"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{numberMessages}</span>
                 <ul className="dropdown-menu dropdown-wide">
                     <li className="head text-light bg-dark">
                         <div className="row">
@@ -69,7 +72,7 @@ class Messages extends React.Component {
                     </li>
                     {this.renderContent()}
                     <li className="footer bg-dark text-center">
-                        <a href="/" className="text-light">View All</a>
+                        <Link to="/messages" className="text-light">View All</Link>
                     </li>
                 </ul>
             </div>
