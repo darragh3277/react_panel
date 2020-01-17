@@ -3,7 +3,7 @@ import {routes} from './Routes'
 import Navbar from './components/navigation/navbar/Navbar';
 import Sidebar from './components/navigation/sidebar/Sidebar';
 import Footer from './components/footer/Footer';
-import PageNotFound from './components/main/errors/page_not_found/PageNotFound';
+import PageNotFound from './components/main/pages/error_pages/page_not_found/PageNotFound';
 import {
   BrowserRouter as Router,
   Route,
