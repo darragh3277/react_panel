@@ -20,7 +20,7 @@ class Notifications extends React.Component {
   renderContent = () => {
     return (
       <ul className="list-group notification-messages">
-        {notifications.map(({ notification, id }, i) => {
+        {notifications.map(({ id, content, date }, i) => {
           const notificationBox =
             i % 2 === 1
               ? 'notification-box bg-gray px-3'
@@ -30,8 +30,8 @@ class Notifications extends React.Component {
               <li className={notificationBox}>
                 <div className="row">
                   <div className="col">
-                    <div>{notification.content}</div>
-                    <small className="text-warning">{notification.date}</small>
+                    <div>{content}</div>
+                    <small className="text-warning">{date}</small>
                   </div>
                 </div>
               </li>
