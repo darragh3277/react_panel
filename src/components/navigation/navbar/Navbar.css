@@ -12,3 +12,7 @@
     height: 16px;
     width: 16px;
 }
+
+.navbar {
+    box-shadow: 0 8px 6px -6px #999;
+}
