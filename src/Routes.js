@@ -6,23 +6,23 @@ import Notifications from "./components/main/notifications/Notifications"
 
 export const routes = [
     {
-        path: "/",
-        component: Dashboard
-      },
-      {
-        path: "/about",
-        component: About
-      },
-      {
-        path: "/account",
-        component: Account
-      },
-      {
-        path: "/messages",
-        component: Messages
-      },
-      {
-        path: "/notifications",
-        component: Notifications
-      },
+      path: "/",
+      component: Dashboard
+    },
+    {
+      path: "/about",
+      component: About
+    },
+    {
+      path: "/account",
+      component: Account
+    },
+    {
+      path: "/messages",
+      component: Messages
+    },
+    {
+      path: "/notifications",
+      component: Notifications
+    },
 ]

@@ -3,6 +3,7 @@ import {routes} from './Routes'
 import Navbar from './components/navigation/navbar/Navbar';
 import Sidebar from './components/navigation/sidebar/Sidebar';
 import Footer from './components/footer/Footer';
+import PageNotFound from './components/main/errors/page_not_found/PageNotFound';
 import {
   BrowserRouter as Router,
   Route,
@@ -28,6 +29,7 @@ class App extends React.Component {
                           {routes.map((route,i)=>
                             <Route key={i} path={route.path} component={route.component} exact></Route>
                           )}
+                          <Route component={PageNotFound} />
                         </Switch>
                       </div>
                     </div>
