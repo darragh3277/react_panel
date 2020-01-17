@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { mainContentLinks, subContentLinks } from './SidebarLinks';
 import './Sidebar.css';
 
@@ -10,7 +10,7 @@ class Sidebar extends React.Component {
             <>
                 {mainContentLinks.map((link,i)=>
                     <li className="nav-item ml-1" key={i}>
-                        <Link className="nav-link text-secondary" to={link.path}>{link.icon} {link.label}</Link>
+                        <NavLink className="nav-link text-secondary" activeClassName="active" exact to={link.path}>{link.icon} {link.label}</NavLink>
                     </li>
                 )}
             </>
@@ -22,7 +22,7 @@ class Sidebar extends React.Component {
             <>
                 {subContentLinks.map((link,i)=>
                     <li className="nav-item ml-1" key={i}>
-                        <Link className="nav-link text-secondary" to={link.path}>{link.icon} {link.label}</Link>
+                        <NavLink className="nav-link text-secondary" activeClassName="active" exact to={link.path}>{link.icon} {link.label}</NavLink>
                     </li>
                 )}
             </>

@@ -16,3 +16,8 @@
     height: 16px;
     width: 16px;
 }
+
+.sidebar .active,
+.sidebar .active:focus {
+    color: #007bff!important;
+}
