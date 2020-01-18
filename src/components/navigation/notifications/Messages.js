@@ -35,7 +35,7 @@ class Messages extends React.Component {
           const notificationBox =
             i % 2 === 1 ? 'notification-box bg-gray' : 'notification-box';
           return (
-            <Link to="/notifications" key={id}>
+            <Link to="/messages" key={id}>
               <li className={notificationBox}>
                 <div className="row">
                   <div className="col-3 text-center">

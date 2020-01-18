@@ -26,7 +26,7 @@ class Notifications extends React.Component {
               ? 'notification-box bg-gray px-3'
               : 'notification-box px-3';
           return (
-            <Link to="/messages" key={id}>
+            <Link to="/notifications" key={id}>
               <li className={notificationBox}>
                 <div className="row">
                   <div className="col">
