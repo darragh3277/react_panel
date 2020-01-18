@@ -15,7 +15,6 @@ const AccountInfo = () => {
               />
             </div>
             <h4 className="mb-0">Sierra Brooks</h4>
-            <span className="text-muted d-block mb-2">Project Manager</span>
           </div>
           <div className="pt-3">
             <strong className="text-secondary">Description</strong>
