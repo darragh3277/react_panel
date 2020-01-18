@@ -6,7 +6,11 @@ const MessagesPage = () => {
   return (
     <>
       <PageTitle title="Messages" />
-      <Messages />
+      <div className="row">
+        <div className="col-lg-12 col-xl-10">
+          <Messages />
+        </div>
+      </div>
     </>
   );
 };
