@@ -15,22 +15,34 @@ const AccountDetails = () => {
                 htmlFor="firstName"
               >
                 First Name
-                <input
-                  type="text"
-                  id="firstName"
-                  className="form-control form-control-sm"
-                />
+                <div className="input-group">
+                  <input
+                    type="text"
+                    id="firstName"
+                    className="form-control form-control-sm rounded"
+                    required
+                  />
+                  <div className="input-group-append">
+                    <span className="clear-input cursor-pointer">x</span>
+                  </div>
+                </div>
               </label>
               <label
                 className="font-weight-bold form-group col-md-6"
                 htmlFor="lastName"
               >
                 Last Name
-                <input
-                  type="text"
-                  id="lastName"
-                  className="form-control form-control-sm"
-                />
+                <div className="input-group">
+                  <input
+                    type="text"
+                    id="lastName"
+                    className="form-control form-control-sm rounded"
+                    required
+                  />
+                  <div className="input-group-append">
+                    <span className="clear-input cursor-pointer">x</span>
+                  </div>
+                </div>
               </label>
             </div>
             <div className="form-row">
@@ -39,11 +51,17 @@ const AccountDetails = () => {
                 htmlFor="email"
               >
                 Email
-                <input
-                  type="email"
-                  id="email"
-                  className="form-control form-control-sm"
-                />
+                <div className="input-group">
+                  <input
+                    type="email"
+                    id="email"
+                    className="form-control form-control-sm rounded"
+                    required
+                  />
+                  <div className="input-group-append">
+                    <span className="clear-input cursor-pointer">x</span>
+                  </div>
+                </div>
               </label>
             </div>
             <div className="form-row">
@@ -52,22 +70,32 @@ const AccountDetails = () => {
                 htmlFor="new_password"
               >
                 New Password
-                <input
-                  type="password"
-                  id="new_password"
-                  className="form-control form-control-sm"
-                />
+                <div className="input-group">
+                  <input
+                    type="password"
+                    id="new_password"
+                    className="form-control form-control-sm rounded"
+                  />
+                  <div className="input-group-append">
+                    <span className="clear-input cursor-pointer">x</span>
+                  </div>
+                </div>
               </label>
               <label
                 className="font-weight-bold form-group col-md-6"
                 htmlFor="old_password"
               >
                 Confirm Password
-                <input
-                  type="password"
-                  id="old_password"
-                  className="form-control form-control-sm"
-                />
+                <div className="input-group">
+                  <input
+                    type="password"
+                    id="old_password"
+                    className="form-control form-control-sm rounded"
+                  />
+                  <div className="input-group-append">
+                    <span className="clear-input cursor-pointer">x</span>
+                  </div>
+                </div>
               </label>
             </div>
             <div className="form-row">
