@@ -6,6 +6,7 @@ const Account = () => {
     <div className="col-1 px-0 text-center">
       <img
         src="images/default_profile.png"
+        id="account-image"
         className="dropdown-toggle cursor-pointer rounded-circle"
         data-toggle="dropdown"
         aria-haspopup="true"

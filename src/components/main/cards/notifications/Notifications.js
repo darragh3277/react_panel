@@ -4,12 +4,14 @@ import './Notifications.css';
 const notifications = [
   {
     id: 1,
+    type: 'Invite',
     date: '10/01/2020',
     content:
       'Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: 2,
+    type: 'New content',
     date: '10/01/2020',
     content: 'Lorem ipsum dolor sit amet, consectetur',
   },
@@ -28,7 +30,10 @@ class Notifications extends React.Component {
             >
               <div className="row">
                 <div className="col-12">
-                  <small className="text-warning">{notification.date}</small>
+                  <strong className="text-info">{notification.type}</strong>
+                  <small className="text-warning float-right">
+                    {notification.date}
+                  </small>
                   <div className="col-12 text-truncate d-inline-block pl-0">
                     {notification.content}
                   </div>
