@@ -8,7 +8,8 @@ const messages = [
     from: 'Barry John',
     image: 'images/default_profile.png',
     date: '10/01/2020',
-    content: 'Lorem ipsum dolor sit amet, consectetur',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.',
   },
   {
     id: 2,
@@ -47,7 +48,7 @@ class Messages extends React.Component {
                   </div>
                   <div className="col-9">
                     <strong className="text-info">{message.from}</strong>
-                    <div>{message.content}</div>
+                    <div className="text-truncate">{message.content}</div>
                     <small className="text-warning">{message.date}</small>
                   </div>
                 </div>

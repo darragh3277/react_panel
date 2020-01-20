@@ -5,12 +5,14 @@ import { Bell } from 'react-feather';
 const notifications = [
   {
     id: 1,
+    type: 'Invite',
     date: '10/01/2020',
     content:
       'Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: 2,
+    type: 'New content',
     date: '10/01/2020',
     content: 'Lorem ipsum dolor sit amet, consectetur',
   },
@@ -20,7 +22,7 @@ class Notifications extends React.Component {
   renderContent = () => {
     return (
       <ul className="list-group notification-messages">
-        {notifications.map(({ id, content, date }, i) => {
+        {notifications.map(({ id, type, content, date }, i) => {
           const notificationBox =
             i % 2 === 1
               ? 'notification-box bg-gray px-3'
@@ -30,8 +32,9 @@ class Notifications extends React.Component {
               <li className={notificationBox}>
                 <div className="row">
                   <div className="col">
-                    <div>{content}</div>
-                    <small className="text-warning">{date}</small>
+                    <strong className="text-info">{type}</strong>
+                    <small className="text-warning float-right">{date}</small>
+                    <div className="text-truncate">{content}</div>
                   </div>
                 </div>
               </li>
