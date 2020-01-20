@@ -7,7 +7,7 @@ const notifications = [
     id: 1,
     date: '10/01/2020',
     content:
-      'Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur',
+      'Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: 2,
