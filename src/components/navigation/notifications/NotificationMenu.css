@@ -52,3 +52,7 @@
 .notification-messages a:hover {
   color: #6c7575;
 }
+
+#notification-menu {
+  max-width: 250px;
+}

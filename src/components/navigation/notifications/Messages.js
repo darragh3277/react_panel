@@ -60,6 +60,23 @@ class Messages extends React.Component {
     );
   };
 
+  renderBadge = () => {
+    const numberMessages = messages.length;
+    if (numberMessages) {
+      return (
+        <span
+          className="badge badge-pill badge-success cursor-pointer"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {numberMessages}
+        </span>
+      );
+    }
+    return null;
+  };
+
   render() {
     const numberMessages = messages.length;
 
@@ -73,14 +90,7 @@ class Messages extends React.Component {
           aria-haspopup="true"
           aria-expanded="false"
         />
-        <span
-          className="badge badge-pill badge-success cursor-pointer"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          {numberMessages}
-        </span>
+        {this.renderBadge()}
         <ul className="dropdown-menu dropdown-wide">
           <li className="head text-light bg-dark">
             <div className="row">

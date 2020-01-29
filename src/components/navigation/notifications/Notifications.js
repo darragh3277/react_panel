@@ -45,6 +45,23 @@ class Notifications extends React.Component {
     );
   };
 
+  renderBadge = () => {
+    const numberNotifications = notifications.length;
+    if (numberNotifications >= 1) {
+      return (
+        <span
+          className="badge badge-pill badge-primary cursor-pointer"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {numberNotifications}
+        </span>
+      );
+    }
+    return null;
+  };
+
   render() {
     const numberNotifications = notifications.length;
     return (
@@ -57,14 +74,7 @@ class Notifications extends React.Component {
           aria-haspopup="true"
           aria-expanded="false"
         />
-        <span
-          className="badge badge-pill badge-primary cursor-pointer"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          {numberNotifications}
-        </span>
+        {this.renderBadge()}
         <ul className="dropdown-menu dropdown-wide">
           <li className="head text-light bg-dark">
             <div className="row">
