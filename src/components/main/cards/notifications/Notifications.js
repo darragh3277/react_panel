@@ -18,9 +18,13 @@ const notifications = [
 ];
 
 class Notifications extends React.Component {
+  renderNoNotifications = () => {
+    return <div className="text-center">You have no messages</div>;
+  };
+
   renderNotifications = () => {
     return (
-      <>
+      <ul className="list-group list-group-flush">
         {notifications.map(notification => {
           const { id } = notification;
           return (
@@ -42,21 +46,24 @@ class Notifications extends React.Component {
             </li>
           );
         })}
-      </>
+      </ul>
     );
+  };
+
+  renderHelper = () => {
+    if (notifications.length > 0) {
+      return <>{this.renderNotifications()}</>;
+    }
+    return <>{this.renderNoNotifications()}</>;
   };
 
   render() {
     return (
       <>
         <div className="card card-small" id="notifications-card">
-          <div className="card-body pt-1">
-            <div className="pt-2 row">
-              <div className="col-12">
-                <ul className="list-group list-group-flush">
-                  {this.renderNotifications()}
-                </ul>
-              </div>
+          <div className="card-body">
+            <div className="row">
+              <div className="col-12">{this.renderHelper()}</div>
             </div>
           </div>
         </div>

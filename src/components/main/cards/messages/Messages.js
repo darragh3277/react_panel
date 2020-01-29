@@ -27,35 +27,35 @@ const messages = [
 ];
 
 class Messages extends React.Component {
+  renderNoMessages = () => {
+    return <div className="text-center">You have no messages</div>;
+  };
+
   renderMessages = () => {
     return (
-      <div className="pt-2 row">
-        <div className="col-12">
-          <ul className="list-group list-group-flush">
-            {messages.map(message => {
-              const { id } = message;
-              return (
-                <li
-                  key={id}
-                  className="pb-0 list-group-item my-0 list-group-item-action border-bottom cursor-pointer"
-                >
-                  <div className="row">
-                    <div className="col-12">
-                      <strong className="text-info">{message.from}</strong>
-                      <small className="text-warning float-right">
-                        {message.date}
-                      </small>
-                      <div className="col-12 text-truncate d-inline-block pl-0">
-                        {message.content}
-                      </div>
-                    </div>
+      <ul className="list-group list-group-flush">
+        {messages.map(message => {
+          const { id } = message;
+          return (
+            <li
+              key={id}
+              className="pb-0 list-group-item my-0 list-group-item-action border-bottom cursor-pointer"
+            >
+              <div className="row">
+                <div className="col-12">
+                  <strong className="text-info">{message.from}</strong>
+                  <small className="text-warning float-right">
+                    {message.date}
+                  </small>
+                  <div className="col-12 text-truncate d-inline-block pl-0">
+                    {message.content}
                   </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     );
   };
 
@@ -69,13 +69,26 @@ class Messages extends React.Component {
     );
   };
 
+  renderHelper = () => {
+    if (messages.length > 0) {
+      return (
+        <>
+          {this.renderMessages()}
+          {this.renderLoadMore()}
+        </>
+      );
+    }
+    return <>{this.renderNoMessages()}</>;
+  };
+
   render() {
     return (
       <>
         <div className="card card-small" id="messages-card">
-          <div className="card-body pt-1">
-            {this.renderMessages()}
-            {this.renderLoadMore()}
+          <div className="card-body">
+            <div className="row">
+              <div className="col-12">{this.renderHelper()}</div>
+            </div>
           </div>
         </div>
       </>
