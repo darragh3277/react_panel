@@ -6,8 +6,11 @@ import './NotificationMenu.css';
 
 const NotificationsMenu = () => {
   return (
-    <div className="container d-none d-md-block text-light">
-      <div className="row justify-content-end" id="notification-menu">
+    <div
+      className="container d-none d-md-block text-light mr-4"
+      id="notification-menu"
+    >
+      <div className="row justify-content-end">
         <Notifications />
         <Messages />
         <Account />

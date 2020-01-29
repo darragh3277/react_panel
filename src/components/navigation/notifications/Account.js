@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Account = () => {
   return (
-    <div className="col-1 px-0 text-center">
+    <div className="col-2 px-0 text-center">
       <img
         src="images/default_profile.png"
         id="account-image"
